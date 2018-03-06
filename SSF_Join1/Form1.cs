@@ -37,10 +37,18 @@ namespace SSF_Join1
         private void button2_Click(object sender, EventArgs e)
         {
             string[] sff_files;
+            string[] ssf_filename;
+
             string temp = string.Empty;
             string[] temp2;
 
             sff_files = Directory.GetFiles(folderName, "*.ssf");
+            ssf_filename = new string[sff_files.Length];
+
+            for (int i =0;i < sff_files.Length; i++)
+            {
+                ssf_filename[i] = Path.GetFileNameWithoutExtension(sff_files[0]);
+            }
 
             for (int i = 0; i < sff_files.Length; i++)
             {
