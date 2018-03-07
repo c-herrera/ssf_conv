@@ -37,18 +37,21 @@ namespace SSF_Join1
         private void button2_Click(object sender, EventArgs e)
         {
             string[] sff_files;
-            string[] ssf_filename;
-
+            string[] ssf_name;
             string temp = string.Empty;
             string[] temp2;
 
             sff_files = Directory.GetFiles(folderName, "*.ssf");
-            ssf_filename = new string[sff_files.Length];
 
-            for (int i =0;i < sff_files.Length; i++)
+            ssf_name = new string[sff_files.Length];
+
+            for (int i =0; i < sff_files.Length; i++)
             {
-                ssf_filename[i] = Path.GetFileNameWithoutExtension(sff_files[0]);
+                ssf_name[i] = Path.GetFileNameWithoutExtension(sff_files[i]);
             }
+
+            
+
 
             for (int i = 0; i < sff_files.Length; i++)
             {
@@ -60,11 +63,18 @@ namespace SSF_Join1
                         temp2 = temp.Split(new[] { "\r\n", "\r", "\n" },StringSplitOptions.None);
                     }
 
-                    using (StreamWriter writer = new StreamWriter(sff_files[i] + "1", true, Encoding.UTF8 ) )
+                    using (StreamWriter writer = new StreamWriter(textBox1.Text + ".ssf1", true, Encoding.UTF8 ) )
                     {
                         if (temp != string.Empty)
-                            writer.WriteLine(string.Join(",",temp2) );
+                        {
+                            writer.WriteLine(string.Join(",", temp2));
+                        }
+                            
                     }
+
+                    IniFileHelper.WriteValue(textBox1.Text, ssf_name[i], string.Join(",", temp2), ".//" + textBox1.Text + ".ssf2");
+                    
+
                 }
                 catch (Exception excp)
                 {
