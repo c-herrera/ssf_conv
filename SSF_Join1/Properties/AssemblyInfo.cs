@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SSF_Join1")]
+[assembly: AssemblyTitle("SSF_Concat")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SSF_Join1")]
+[assembly: AssemblyProduct("SSF_Concat")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("06d0493d-a7a1-4a22-97c3-9484f9ab1123")]
+[assembly: Guid("384b913c-b008-40fb-b91c-e8c13f56d499")]
 
 // Version information for an assembly consists of the following four values:
 //

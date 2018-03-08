@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SSF_Join1.Properties
+namespace SSF_Concat.Properties
 {
 
 
