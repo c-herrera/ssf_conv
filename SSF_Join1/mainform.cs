@@ -98,6 +98,15 @@ namespace SSF_Concat
                     MessageBox.Show("Error execption :" + excp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
+
+            if (File.Exists(txt_prefix_key.Text + ".ssf"))
+            {
+                Log.Trace("Moving file to " + Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+                File.Move(".//" + txt_prefix_key.Text + ".ssf", Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "//" + txt_prefix_key.Text + ".ssf");
+            }
+
+            btn_process_files.Enabled = false;
+            txt_prefix_key.Text = String.Empty;
         }
 
         /// <summary>
