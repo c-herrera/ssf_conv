@@ -148,7 +148,8 @@ namespace SSF_Join1
             {
                 using (StreamWriter Writer = new StreamWriter(Filename, append, Encoding.UTF8))
                 {
-                    if (text != "") Writer.WriteLine(text);
+                    if (text != "")
+                        Writer.WriteLine(text);
                 }
             }
             catch
