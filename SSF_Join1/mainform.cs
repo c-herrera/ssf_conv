@@ -96,6 +96,7 @@ namespace SSF_Concat
                 catch (Exception excp)
                 {
                     MessageBox.Show("Error execption :" + excp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Log.Error("An exception ocurred "  + excp.Message);
                 }
             }
 
@@ -117,6 +118,9 @@ namespace SSF_Concat
         private void btn_quit_tool_Click(object sender, EventArgs e)
         {
             Log.Trace("Application Exit!");
+            Log.Report("Error count    : " + Log.TotalErrors);
+            Log.Report("Warnings count : " + Log.TotalWarnings);
+            Log.Report("Failures count : " + Log.TotalFatalErrors);
             Application.Exit();
         }
 
